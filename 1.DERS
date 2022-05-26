@@ -1,0 +1,20 @@
+
+sayi1 = input('1. Sayı : ')
+sayi2 = input('1. Sayı : ')
+ortalama=(int(sayi1)+int(sayi2))/2
+print("Ortalama :{0} ".format(ortalama))
+
+//Vize ve Final Notu Ortalaması Hesapla
+vize = input('Vize Notunuz : ')
+final = input('Final Notunuz : ')
+ortalama=(float(vize)*0.3)+(float(final)*0.7)
+print("Ortalama :{0} ".format(ortalama))
+
+
+y1 = input('1. Yazılı : ')
+y2 = input('2. Yazılı : ')
+y3 = input('3. Yazılı : ')
+ortalama=(float(y1)+float(y2)+float(y3))/3
+print("Ortalama :{0} ".format(ortalama))
+
+
