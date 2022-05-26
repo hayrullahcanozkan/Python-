@@ -1,0 +1,82 @@
+import numpy as np
+import pandas as pd
+
+
+Series / Seriler
+benimSozlugum = {"Atil" : 50, "Zeynep" : 40, "Mehmet" : 30}
+pd.Series(benimSozlugum)
+Atil      50
+Zeynep    40
+Mehmet    30
+dtype: int64
+benimYaslarim = [50,40,30]
+benimIsimlerim = ["Atil", "Zeynep", "Mehmet"]
+pd.Series(benimYaslarim)
+0    50
+1    40
+2    30
+dtype: int64
+pd.Series(benimYaslarim, benimIsimlerim)
+Atil      50
+Zeynep    40
+Mehmet    30
+dtype: int64
+pd.Series(data=benimYaslarim, index=benimIsimlerim)
+Atil      50
+Zeynep    40
+Mehmet    30
+dtype: int64
+numpyDizisi = np.array([50,40,30])
+numpyDizisi
+array([50, 40, 30])
+
+
+pd.Series(numpyDizisi)
+0    50
+1    40
+2    30
+dtype: int64
+pd.Series(numpyDizisi,benimIsimlerim)
+Atil      50
+Zeynep    40
+Mehmet    30
+dtype: int64
+pd.Series(["Atil","Atlas","Osman"],[1,2,3])
+1     Atil
+2    Atlas
+3    Osman
+dtype: object
+yarismaSonucu1 = pd.Series([10,5,1],["Atil","Atlas","Osman"])
+
+
+
+yarismaSonucu1
+Atil     10
+Atlas     5
+Osman     1
+dtype: int64
+yarismaSonucu2 = pd.Series([20,10,8],["Atil","Atlas","Osman"])
+yarismaSonucu2
+Atil     20
+Atlas    10
+Osman     8
+dtype: int64
+yarismaSonucu2["Atlas"]
+10
+sonSonuc = yarismaSonucu1 + yarismaSonucu2
+
+
+
+sonSonuc
+Atil     30
+Atlas    15
+Osman     9
+dtype: int64
+farkliSeries = pd.Series([20,30,40,50],["a","b","c","d"])
+farkliSeries2 = pd.Series([10,5,3,1],["a","c","f","g"])
+farkliSeries
+a    20
+b    30
+c    40
+d    50
+dtype: int64
